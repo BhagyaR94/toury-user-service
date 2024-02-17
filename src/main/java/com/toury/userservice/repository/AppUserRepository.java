@@ -4,8 +4,6 @@ import com.toury.userservice.documents.AppUser;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import java.util.List;
-
 public interface AppUserRepository extends MongoRepository<AppUser, String> {
     @Query("userName:'?0'")
     AppUser findItemByName(String userName);
